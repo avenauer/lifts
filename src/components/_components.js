@@ -1,9 +1,10 @@
 import styled from "@emotion/styled";
-import {WideContainerStyled} from "./_maincomponents";
+import { WideContainerStyled } from "./_maincomponents";
 
 export const MaterialChangeStyled = styled(WideContainerStyled)`
   position: absolute;
   background-color: white;
+  box-shadow: 0 0 15px 0 black;
   z-index: 1;
   left: 0;
   right: 0;
@@ -14,7 +15,7 @@ export const MaterialChangeStyled = styled(WideContainerStyled)`
     bottom: 0;
   }
 
-  span {
+  & .title {
     display: block;
     margin-left: 6px;
     margin-top: 6px;
@@ -23,16 +24,26 @@ export const MaterialChangeStyled = styled(WideContainerStyled)`
 
 export const MaterialItemStyled = styled.div`
   margin: 1em 6px 1em 0;
-  width: 36px;
-  height: 36px;
-  position: relative;
-  overflow: hidden;
   display: inline-block;
-  border-radius: 32px;
   transition: 150ms ease-out;
-  box-sizing: border-box;
-  border: 1px solid white;
-  box-shadow: 0 0 10px -4px black;
+  border: 1px solid red;
+
+  div {
+    position: relative;
+    box-shadow: 0 0 10px -4px black;
+    height: 36px;
+    width: 36px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid white;
+    border-radius: 32px;
+
+    span {
+      z-index: 100;
+      position: absolute;
+      top: 15px;
+    }
+  }
 
   &:nth-of-type(1) {
     margin-left: 6px;

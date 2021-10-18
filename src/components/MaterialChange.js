@@ -1,27 +1,26 @@
-import React from "react";
-import { MaterialChangeStyled, MaterialItemStyled } from "./_components";
-import woodenredmaterial from "../assets/Materials/redwood.jpg";
+import React, { useState } from "react";
+import { MaterialChangeStyled } from "./_components";
 import MaterialItem from "./MaterialItem";
 
-import RAL9006Image from "../assets/Materials/redwood.jpg";
-import DarkOakImage from "../assets/Materials/redwood.jpg";
-import BirchOakImage from "../assets/Materials/redwood.jpg";
-import BlackFoilPatternImage from "../assets/Materials/redwood.jpg";
+import RAL9006Image from "../assets/Materials/RAL9006Material.png";
+import DarkOakImage from "../assets/Materials/DarkOakMaterial.png";
+import BirchOakImage from "../assets/Materials/BirchOakMaterial.png";
+import BlackFoilPatternImage from "../assets/Materials/BlackFoilPatternMaterial.png";
 
-import SpruceOakImage from "../assets/Materials/redwood.jpg";
-import OakImage from "../assets/Materials/redwood.jpg";
-import AcaciaOakImage from "../assets/Materials/redwood.jpg";
-import WhiteFoilPatternImage from "../assets/Materials/redwood.jpg";
+import SpruceOakImage from "../assets/Materials/SpruceOakMaterial.png";
+import OakImage from "../assets/Materials/OakMaterial.png";
+import AcaciaOakImage from "../assets/Materials/AcaciaOakMaterial.png";
+import WhiteFoilPatternImage from "../assets/Materials/WhiteFoilPatternMaterial.png";
 
-import BlackFoilImage from "../assets/Materials/redwood.jpg";
-import WhiteFoilImage from "../assets/Materials/redwood.jpg";
-import RedOakImage from "../assets/Materials/redwood.jpg";
-//todo: Add another whiteFoil
+import BlackSkinImage from "../assets/Materials/BlackSkinMaterial.png";
+import WhiteOakImage from "../assets/Materials/WhiteOakMaterial.png";
+import RedOakImage from "../assets/Materials/RedOakMaterial.png";
+import WhiteSkinImage from "../assets/Materials/WhiteSkinMaterial.png";
 
-import LightOakImage from "../assets/Materials/redwood.jpg";
-import CaroPatternImage from "../assets/Materials/redwood.jpg";
-import SheetPatternImage from "../assets/Materials/redwood.jpg";
-import RALImage from "../assets/Materials/redwood.jpg";
+import LightOakImage from "../assets/Materials/LightOakMaterial.png";
+import SheetPatternImage from "../assets/Materials/SheetPatternMaterial.png";
+import CaroPatternImage from "../assets/Materials/CaroPatternMaterial.png";
+import RALFoilImage from "../assets/Materials/RALFoilMaterial.png";
 
 const MaterialChange = ({
   pos1,
@@ -41,27 +40,33 @@ const MaterialChange = ({
   pos15,
   pos16,
 }) => {
+  const [isActive, setActive] = useState("false");
+
+  const handleToggle = () => {
+    setActive(!isActive);
+  };
+
   return (
-    <MaterialChangeStyled>
-      <MaterialItem name="Name" srcimage={RAL9006Image} click={pos1} />
-      <MaterialItem name="Name" srcimage={RAL9006Image} click={pos2} />
-      <MaterialItem name="Name" srcimage={RAL9006Image} click={pos3} />
-      <MaterialItem name="Name" srcimage={RAL9006Image} click={pos4} />
+    <MaterialChangeStyled onClick={handleToggle} className={isActive ? null : 'Test'}>
+      <MaterialItem name="RAL 9006" srcimage={RAL9006Image} click={pos1} />
+      <MaterialItem name="Name" srcimage={DarkOakImage} click={pos2} />
+      <MaterialItem name="Name" srcimage={BirchOakImage} click={pos3} />
+      <MaterialItem name="Name" srcimage={BlackFoilPatternImage} click={pos4} />
 
-      <MaterialItem name="Name" srcimage={RAL9006Image} click={pos5} />
-      <MaterialItem name="Name" srcimage={RAL9006Image} click={pos6} />
-      <MaterialItem name="Name" srcimage={RAL9006Image} click={pos7} />
-      <MaterialItem name="Name" srcimage={RAL9006Image} click={pos8} />
+      <MaterialItem name="Name" srcimage={SpruceOakImage} click={pos5} />
+      <MaterialItem name="Name" srcimage={OakImage} click={pos6} />
+      <MaterialItem name="Name" srcimage={AcaciaOakImage} click={pos7} />
+      <MaterialItem name="Name" srcimage={WhiteFoilPatternImage} click={pos8} />
 
-      <MaterialItem name="Name" srcimage={RAL9006Image} click={pos9} />
-      <MaterialItem name="Name" srcimage={RAL9006Image} click={pos10} />
-      <MaterialItem name="Name" srcimage={RAL9006Image} click={pos11} />
-      <MaterialItem name="Name" srcimage={RAL9006Image} click={pos12} />
+      <MaterialItem name="Name" srcimage={BlackSkinImage} click={pos9} />
+      <MaterialItem name="Name" srcimage={WhiteOakImage} click={pos10} />
+      <MaterialItem name="Name" srcimage={RedOakImage} click={pos11} />
+      <MaterialItem name="Name" srcimage={WhiteSkinImage} click={pos12} />
 
-      <MaterialItem name="Name" srcimage={RAL9006Image} click={pos13} />
-      <MaterialItem name="Name" srcimage={RAL9006Image} click={pos14} />
-      <MaterialItem name="Name" srcimage={RAL9006Image} click={pos15} />
-      <MaterialItem name="Name" srcimage={RAL9006Image} click={pos16} />
+      <MaterialItem name="Name" srcimage={LightOakImage} click={pos13} />
+      <MaterialItem name="Name" srcimage={SheetPatternImage} click={pos14} />
+      <MaterialItem name="Name" srcimage={CaroPatternImage} click={pos15} />
+      <MaterialItem name="Name" srcimage={RALFoilImage} click={pos16} />
     </MaterialChangeStyled>
   );
 };

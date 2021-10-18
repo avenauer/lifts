@@ -5,25 +5,25 @@ import "aframe-event-set-component";
 import MaterialChange from "./components/MaterialChange";
 
 /*HDRI Images Platforms*/
-import RAL9006Platform from "./assets/HDRI/1000.jpg";
-import DarkOakPlatform from "./assets/HDRI/1000.jpg";
-import BirchOakPlatform from "./assets/HDRI/1000.jpg";
+import RAL9006Platform from "./assets/HDRI/Allcon-1000-v2.jpg";
+import DarkOakPlatform from "./assets/HDRI/Allcon-630.jpg";
+import BirchOakPlatform from "./assets/HDRI/Denoised beauty.jpeg";
 import BlackFoilPatternPlatform from "./assets/HDRI/1000.jpg";
 
-import SpruceOakPlatform from "./assets/HDRI/1000.jpg";
-import OakPlatform from "./assets/HDRI/1000.jpg";
+import SpruceOakPlatform from "./assets/HDRI/Denoised beauty.jpeg";
+import OakPlatform from "./assets/HDRI/Allcon-630.jpg";
 import AcaciaOakPlatform from "./assets/HDRI/1000.jpg";
-import WhiteFoilPatternPlatform from "./assets/HDRI/1000.jpg";
+import WhiteFoilPatternPlatform from "./assets/HDRI/Allcon-630.jpg";
 
-import BlackFoilPlatform from "./assets/HDRI/1000.jpg";
-import WhiteFoilPlatform from "./assets/HDRI/1000.jpg";
+import BlackSkinPlatform from "./assets/HDRI/1000.jpg";
+import WhiteOakPlatform from "./assets/HDRI/Allcon-630.jpg";
 import RedOakPlatform from "./assets/HDRI/1000.jpg";
-//todo: Add another whiteFoil
+import WhiteSkinPlatform from "./assets/HDRI/Allcon-630.jpg";
 
 import LightOakPlatform from "./assets/HDRI/1000.jpg";
+import SheetPatternPlatform from "./assets/HDRI/Allcon-630.jpg";
 import CaroPatternPlatform from "./assets/HDRI/1000.jpg";
-import SheetPatternPlatform from "./assets/HDRI/1000.jpg";
-import RALPlatform from "./assets/HDRI/1000.jpg";
+import RALFoilPlatform from "./assets/HDRI/Allcon-630.jpg";
 
 const AutoDetectControllers = () => {
   return <a-entity auto-detect-controllers="false" />;
@@ -31,7 +31,7 @@ const AutoDetectControllers = () => {
 
 class WelcomeToVR extends React.Component {
   state = {
-    currentPos: "30 30 30",
+    currentPos: "30 30 -30",
   };
   changePos = (e) => () => {
     this.setState({
@@ -40,12 +40,25 @@ class WelcomeToVR extends React.Component {
   };
 
   render(props) {
-    console.log(this.state.currentPos);
     return (
       <div>
         <MaterialChange
-          pos1={this.changePos("0 0 20")}
-          pos2={this.changePos("0 0 0")}
+          pos1={this.changePos(" 0 0 0")}
+          pos2={this.changePos(" 0 0 -20")}
+          pos3={this.changePos(" 0 0 -40")}
+          pos4={this.changePos(" 0 0 -60")}
+          pos5={this.changePos(" 20 0 0 ")}
+          pos6={this.changePos(" 20 0 -20")}
+          pos7={this.changePos(" 20 0 -40")}
+          pos8={this.changePos(" 20 0 -60")}
+          pos9={this.changePos(" 40 0 0")}
+          pos10={this.changePos("40 0 -20")}
+          pos11={this.changePos("40 0 -40")}
+          pos12={this.changePos("40 0 -60")}
+          pos13={this.changePos("60 0 0")}
+          pos14={this.changePos("60 0 -20")}
+          pos15={this.changePos("60 0 -40")}
+          pos16={this.changePos("60 0 -60")}
         />
         <div style={{ minWidth: "100vw", minHeight: "100vh" }}>
           <Scene
@@ -57,24 +70,50 @@ class WelcomeToVR extends React.Component {
               <img id="ral9006" src={RAL9006Platform} alt="" />
               <img id="darkoak" src={DarkOakPlatform} alt="" />
               <img id="birchoak" src={BirchOakPlatform} alt="" />
-              <img id="blackfoilpattern" src={BlackFoilPatternPlatform} alt="" />
+              <img
+                id="blackfoilpattern"
+                src={BlackFoilPatternPlatform}
+                alt=""
+              />
 
               <img id="spruceoak" src={SpruceOakPlatform} alt="" />
               <img id="oak" src={OakPlatform} alt="" />
               <img id="acaciaoak" src={AcaciaOakPlatform} alt="" />
-              <img id="whitefoilpattern" src={WhiteFoilPatternPlatform} alt="" />
+              <img
+                id="whitefoilpattern"
+                src={WhiteFoilPatternPlatform}
+                alt=""
+              />
 
-              <img id="blackfoil" src={BlackFoilPlatform} alt="" />
-              <img id="whitefoil" src={WhiteFoilPlatform} alt="" />
+              <img id="blackskin" src={BlackSkinPlatform} alt="" />
+              <img id="whiteoak" src={WhiteOakPlatform} alt="" />
               <img id="redoak" src={RedOakPlatform} alt="" />
+              <img id="whiteskin" src={WhiteSkinPlatform} alt="" />
 
               <img id="lightoak" src={LightOakPlatform} alt="" />
-              <img id="caropattern" src={CaroPatternPlatform} alt="" />
               <img id="sheetpattern" src={SheetPatternPlatform} alt="" />
-              <img id="ral" src={RALPlatform} alt="" />
+              <img id="caropattern" src={CaroPatternPlatform} alt="" />
+              <img id="ralfoil" src={RALFoilPlatform} alt="" />
             </a-assets>
-            <a-sky radius="10" src="#point1" />
-            <a-sky position="0 0 20" radius="10" src="#point2" />
+            <a-sky position="0 0 0" radius="10" src="#ral9006" />
+            <a-sky position="0 0 -20" radius="10" src="#darkoak" />
+            <a-sky position="0 0 -40" radius="10" src="#birchoak" />
+            <a-sky position="0 0 -60" radius="10" src="#blackfoilpattern" />
+
+            <a-sky position="20 0 0" radius="10" src="#spruceoak" />
+            <a-sky position="20 0 -20" radius="10" src="#oak" />
+            <a-sky position="20 0 -40" radius="10" src="#acaciaoak" />
+            <a-sky position="20 0 -60" radius="10" src="#whitefoilpattern" />
+
+            <a-sky position="40 0 0" radius="10" src="#blackskin" />
+            <a-sky position="40 0 -20" radius="10" src="#whiteoak" />
+            <a-sky position="40 0 -40" radius="10" src="#redoak" />
+            <a-sky position="40 0 -60" radius="10" src="#whiteskin" />
+
+            <a-sky position="60 0 0" radius="10" src="#lightoak" />
+            <a-sky position="60 0 -20" radius="10" src="#sheetpattern" />
+            <a-sky position="60 0 -40" radius="10" src="#caropattern" />
+            <a-sky position="60 0 -60" radius="10" src="#ralfoil" />
             <a-entity position={this.state.currentPos} rotation="0 90 0">
               <a-camera wasd-controls-enabled="true" reverse-mouse-drag="true">
                 <a-cursor />

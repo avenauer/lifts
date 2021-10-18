@@ -8,11 +8,15 @@ export const MaterialChangeStyled = styled(WideContainerStyled)`
   z-index: 1;
   left: 0;
   right: 0;
-  bottom: -50px;
+  bottom: 0;
   transition: 150ms ease-out;
+  cursor: pointer;
+
+  & .Test {
+    border: 2px solid red;
+  }
 
   &:hover {
-    bottom: 0;
   }
 
   & .title {
@@ -37,12 +41,14 @@ export const MaterialItemStyled = styled.div`
     box-sizing: border-box;
     border: 1px solid white;
     border-radius: 32px;
+  }
 
-    span {
-      z-index: 100;
-      position: absolute;
-      top: 15px;
-    }
+  span {
+    font-size: 1.2em;
+    z-index: 100;
+    position: absolute;
+    top: -5px;
+    color: #45587b;
   }
 
   &:nth-of-type(1) {
@@ -55,7 +61,10 @@ export const MaterialItemStyled = styled.div`
   }
 
   img {
-    width: 100%;
+    width: 128px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     position: absolute;
   }
 `;

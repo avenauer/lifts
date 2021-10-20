@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { WideContainerStyled } from "./_maincomponents";
+import { keyframes } from "@emotion/react";
 
 export const MaterialChangeStyled = styled(WideContainerStyled)`
   position: absolute;
@@ -66,5 +67,84 @@ export const MaterialItemStyled = styled.div`
     top: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
+  }
+`;
+
+const AnimationTest = keyframes`
+  0% {
+    opacity: 0;
+    stroke-dasharray: 0, 100;
+  }
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    stroke-dasharray: 100, 100;
+  }
+`;
+
+const LogoLoading = keyframes`
+0% {
+  opacity: 0;
+  
+}
+  100% {
+    opacity: 1;
+  }
+`;
+
+const LoaderOpacity = keyframes`
+  0%, 90% {
+    opacity: 1;
+  }
+  
+  99.99% {
+    z-index: 2;
+  }
+  100% {
+    z-index: -1;
+    opacity: 0;
+  }
+`;
+
+export const LoaderStyled = styled.div`
+  position: fixed;
+  z-index: 2;
+  background-color: black;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  animation-delay: 0ms;
+  animation: ${LoaderOpacity} 7000ms forwards;
+
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    opacity: 0;
+    animation: ${LogoLoading} 2000ms linear forwards;
+    animation-delay: 1000ms;
+    transform: translate(-50%, -50%);
+    width: 100px;
+  }
+
+  svg {
+    opacity: 0;
+    animation: ${AnimationTest} cubic-bezier(0, 0.55, 0.45, 1) 5000ms forwards;
+    animation-delay: 1000ms;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 200px;
+
+    path {
+      stroke: white;
+      stroke-width: 0.05em;
+      stroke-linecap: round;
+    }
   }
 `;

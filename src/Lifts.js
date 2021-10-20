@@ -31,7 +31,8 @@ const AutoDetectControllers = () => {
 
 class WelcomeToVR extends React.Component {
   state = {
-    currentPos: "30 30 -30",
+    /*currentPos: "30 30 -30",*/
+    currentPos: "0 0 0",
   };
   changePos = (e) => () => {
     this.setState({
@@ -116,7 +117,7 @@ class WelcomeToVR extends React.Component {
             <a-sky position="60 0 -60" radius="10" src="#ralfoil" />
             <a-entity position={this.state.currentPos} rotation="0 90 0">
               <a-camera fov="80" wasd-controls-enabled="false" reverse-mouse-drag="true">
-                <a-cursor />
+                {/*<a-cursor />*/}
               </a-camera>
             </a-entity>
           </Scene>

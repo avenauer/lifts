@@ -2,6 +2,20 @@ import styled from "@emotion/styled";
 import { WideContainerStyled } from "./_maincomponents";
 import { keyframes } from "@emotion/react";
 
+const Test = keyframes`
+0%, 90% {
+  opacity: 0;
+}
+  
+100% {
+    opacity: 1;
+}
+`;
+
+export const LiftsStyledWrapper = styled.div`
+  animation: ${Test} 1000ms forwards;
+`;
+
 export const MaterialChangeStyled = styled(WideContainerStyled)`
   position: absolute;
   background-color: white;

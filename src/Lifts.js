@@ -24,6 +24,7 @@ import LightOakPlatform from "./assets/HDRI/Denoised beauty1.jpeg";
 import SheetPatternPlatform from "./assets/HDRI/HDRI-SheetPattern.jpg";
 import CaroPatternPlatform from "./assets/HDRI/Denoised beauty1.jpeg";
 import RALFoilPlatform from "./assets/HDRI/Denoised beauty1.jpeg";
+import {LiftsStyledWrapper} from "./components/_components";
 
 const AutoDetectControllers = () => {
   return <a-entity auto-detect-controllers="false" />;
@@ -42,7 +43,7 @@ class WelcomeToVR extends React.Component {
 
   render(props) {
     return (
-      <div>
+      <LiftsStyledWrapper>
         <MaterialChange
           pos1={this.changePos(" 0 0 0")}
           pos2={this.changePos(" 0 0 -20")}
@@ -122,7 +123,7 @@ class WelcomeToVR extends React.Component {
             </a-entity>
           </Scene>
         </div>
-      </div>
+      </LiftsStyledWrapper>
     );
   }
 }

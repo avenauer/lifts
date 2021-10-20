@@ -5,25 +5,25 @@ import "aframe-event-set-component";
 import MaterialChange from "./components/MaterialChange";
 
 /*HDRI Images Platforms*/
-import RAL9006Platform from "./assets/HDRI/Allcon-1000-v2.jpg";
-import DarkOakPlatform from "./assets/HDRI/Allcon-630.jpg";
-import BirchOakPlatform from "./assets/HDRI/Denoised beauty.jpeg";
-import BlackFoilPatternPlatform from "./assets/HDRI/1000.jpg";
+import RAL9006Platform from "./assets/HDRI/HDRI-RAL9006.jpg";
+import DarkOakPlatform from "./assets/HDRI/HDRI-DarkOak.jpg";
+import BirchOakPlatform from "./assets/HDRI/Denoised beauty1.jpeg";
+import BlackFoilPatternPlatform from "./assets/HDRI/HDRI-BlackFoilPattern.jpg";
 
-import SpruceOakPlatform from "./assets/HDRI/Denoised beauty.jpeg";
-import OakPlatform from "./assets/HDRI/Allcon-630.jpg";
-import AcaciaOakPlatform from "./assets/HDRI/1000.jpg";
-import WhiteFoilPatternPlatform from "./assets/HDRI/Allcon-630.jpg";
+import SpruceOakPlatform from "./assets/HDRI/HDRI-SpruceOak.jpg";
+import OakPlatform from "./assets/HDRI/HDRI-Oak.jpg";
+import AcaciaOakPlatform from "./assets/HDRI/HDRI-AcaciaOak.jpg";
+import WhiteFoilPatternPlatform from "./assets/HDRI/HDRI-WhiteFoilPattern.jpg";
 
-import BlackSkinPlatform from "./assets/HDRI/1000.jpg";
-import WhiteOakPlatform from "./assets/HDRI/Allcon-630.jpg";
-import RedOakPlatform from "./assets/HDRI/1000.jpg";
-import WhiteSkinPlatform from "./assets/HDRI/Allcon-630.jpg";
+import BlackSkinPlatform from "./assets/HDRI/Denoised beauty1.jpeg";
+import WhiteOakPlatform from "./assets/HDRI/Denoised beauty1.jpeg";
+import RedOakPlatform from "./assets/HDRI/HDRI-RedOak.jpg";
+import WhiteSkinPlatform from "./assets/HDRI/HDRI-WhiteSkin.jpg";
 
-import LightOakPlatform from "./assets/HDRI/1000.jpg";
-import SheetPatternPlatform from "./assets/HDRI/Allcon-630.jpg";
-import CaroPatternPlatform from "./assets/HDRI/1000.jpg";
-import RALFoilPlatform from "./assets/HDRI/Allcon-630.jpg";
+import LightOakPlatform from "./assets/HDRI/Denoised beauty1.jpeg";
+import SheetPatternPlatform from "./assets/HDRI/HDRI-SheetPattern.jpg";
+import CaroPatternPlatform from "./assets/HDRI/Denoised beauty1.jpeg";
+import RALFoilPlatform from "./assets/HDRI/Denoised beauty1.jpeg";
 
 const AutoDetectControllers = () => {
   return <a-entity auto-detect-controllers="false" />;
@@ -115,7 +115,7 @@ class WelcomeToVR extends React.Component {
             <a-sky position="60 0 -40" radius="10" src="#caropattern" />
             <a-sky position="60 0 -60" radius="10" src="#ralfoil" />
             <a-entity position={this.state.currentPos} rotation="0 90 0">
-              <a-camera wasd-controls-enabled="true" reverse-mouse-drag="true">
+              <a-camera fov="80" wasd-controls-enabled="false" reverse-mouse-drag="true">
                 <a-cursor />
               </a-camera>
             </a-entity>

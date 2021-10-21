@@ -45,7 +45,6 @@ export const MaterialItemStyled = styled.div`
   margin: 1em 6px 1em 0;
   display: inline-block;
   transition: 150ms ease-out;
-  border: 1px solid red;
 
   div {
     position: relative;

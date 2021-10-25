@@ -25,6 +25,24 @@ import SheetPatternPlatform from "./assets/HDRI/HDRI-SheetPattern.jpg";
 import CaroPatternPlatform from "./assets/HDRI/Denoised beauty1.jpeg";
 import RALFoilPlatform from "./assets/HDRI/Denoised beauty1.jpeg";
 import { LiftsStyledWrapper } from "./components/_components";
+import { Carousel } from "./components/Test";
+import MaterialItem from "./components/MaterialItem";
+import RAL9006Image from "./assets/Materials/RAL9006Material.png";
+import DarkOakImage from "./assets/Materials/DarkOakMaterial.png";
+import BirchOakImage from "./assets/Materials/BirchOakMaterial.png";
+import BlackFoilPatternImage from "./assets/Materials/BlackFoilPatternMaterial.png";
+import SpruceOakImage from "./assets/Materials/SpruceOakMaterial.png";
+import OakImage from "./assets/Materials/OakMaterial.png";
+import AcaciaOakImage from "./assets/Materials/AcaciaOakMaterial.png";
+import WhiteFoilPatternImage from "./assets/Materials/WhiteFoilPatternMaterial.png";
+import BlackSkinImage from "./assets/Materials/BlackSkinMaterial.png";
+import WhiteOakImage from "./assets/Materials/WhiteOakMaterial.png";
+import RedOakImage from "./assets/Materials/RedOakMaterial.png";
+import WhiteSkinImage from "./assets/Materials/WhiteSkinMaterial.png";
+import LightOakImage from "./assets/Materials/LightOakMaterial.png";
+import SheetPatternImage from "./assets/Materials/SheetPatternMaterial.png";
+import CaroPatternImage from "./assets/Materials/CaroPatternMaterial.png";
+import RALFoilImage from "./assets/Materials/RALFoilMaterial.png";
 
 const AutoDetectControllers = () => {
   return <a-entity auto-detect-controllers="false" />;
@@ -44,6 +62,95 @@ class WelcomeToVR extends React.Component {
   render(props) {
     return (
       <LiftsStyledWrapper>
+        <Carousel
+          dzieci={
+            <div className="item-lower">
+              <MaterialItem
+                click={this.changePos(" 0 0 0")}
+                name="RAL 9006"
+                srcimage={RAL9006Image}
+              />
+              <MaterialItem
+                click={this.changePos(" 0 0 -20")}
+                name="Name"
+                srcimage={DarkOakImage}
+              />
+              <MaterialItem
+                click={this.changePos(" 0 0 -40")}
+                name="Name"
+                srcimage={BirchOakImage}
+              />
+              <MaterialItem
+                click={this.changePos(" 0 0 -60")}
+                name="Name"
+                srcimage={BlackFoilPatternImage}
+              />
+
+              <MaterialItem
+                click={this.changePos(" 20 0 0 ")}
+                name="Name"
+                srcimage={SpruceOakImage}
+              />
+              <MaterialItem
+                click={this.changePos(" 20 0 -20")}
+                name="Name"
+                srcimage={OakImage}
+              />
+              <MaterialItem
+                click={this.changePos(" 20 0 -40")}
+                name="Name"
+                srcimage={AcaciaOakImage}
+              />
+              <MaterialItem
+                click={this.changePos(" 20 0 -60")}
+                name="Name"
+                srcimage={WhiteFoilPatternImage}
+              />
+
+              <MaterialItem
+                click={this.changePos(" 40 0 0")}
+                name="Name"
+                srcimage={BlackSkinImage}
+              />
+              <MaterialItem
+                click={this.changePos(" 40 0 -20")}
+                name="Name"
+                srcimage={WhiteOakImage}
+              />
+              <MaterialItem
+                click={this.changePos(" 40 0 -40")}
+                name="Name"
+                srcimage={RedOakImage}
+              />
+              <MaterialItem
+                click={this.changePos(" 40 0 -60")}
+                name="Name"
+                srcimage={WhiteSkinImage}
+              />
+
+              <MaterialItem
+                click={this.changePos("60 0 0")}
+                name="Name"
+                srcimage={LightOakImage}
+              />
+              <MaterialItem
+                click={this.changePos("60 0 -20")}
+                name="Name"
+                srcimage={SheetPatternImage}
+              />
+              <MaterialItem
+                click={this.changePos("60 0 -40")}
+                name="Name"
+                srcimage={CaroPatternImage}
+              />
+              <MaterialItem
+                click={this.changePos("60 0 -60")}
+                name="Name"
+                srcimage={RALFoilImage}
+              />
+            </div>
+          }
+        />
         <MaterialChange
           pos1={this.changePos(" 0 0 0")}
           pos2={this.changePos(" 0 0 -20")}

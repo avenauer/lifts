@@ -7,9 +7,59 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto", sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.carousel {
+  /* position: absolute; */
+}
+
+.track {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.item-lower > div {
+  display: inline-block;
+}
+
+.item-col:first-of-type {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.item p {
+  margin: 0;
+  display: block;
+  padding: 0;
+}
+
+.item-title {
+  font-weight: bold;
+}
+
+.button {
+  appearance: none;
+  border: none;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.25rem;
+}
+.button span {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 65px;
+  width: 65px;
+  height: 65px;
+  margin-bottom: 0.25rem;
 }

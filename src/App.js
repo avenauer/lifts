@@ -5,9 +5,8 @@ import { Carousel } from "./components/Test";
 function App() {
   return (
     <>
-      {/*<Loader />
-      <Lifts />*/}
-      <Carousel />
+      {/*<Loader />*/}
+      <Lifts />
     </>
   );
 }

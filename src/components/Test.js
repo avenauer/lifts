@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, useAnimation } from "framer-motion";
-import "./index.css";
+import "../index.css";
 import MaterialItem from "./MaterialItem";
 import RAL9006Image from "../assets/Materials/RAL9006Material.png";
 import DarkOakImage from "../assets/Materials/DarkOakMaterial.png";
@@ -18,8 +18,13 @@ import LightOakImage from "../assets/Materials/LightOakMaterial.png";
 import SheetPatternImage from "../assets/Materials/SheetPatternMaterial.png";
 import CaroPatternImage from "../assets/Materials/CaroPatternMaterial.png";
 import RALFoilImage from "../assets/Materials/RALFoilMaterial.png";
+import {
+  MobileMenuContainer,
+  MobileMenuStyled,
+  MobileMenuTitleWrapper,
+} from "./_components";
 
-export function Carousel() {
+export function Carousel({ dzieci }) {
   const ref = React.useRef();
   const [rect, setRect] = React.useState();
   const [yOffset, setYOffset] = React.useState(0);
@@ -33,13 +38,18 @@ export function Carousel() {
   }, []);
 
   return (
-    <div className="carousel" style={{ transform: `translateY(${yOffset}px)` }}>
-      <Item ref={ref} yOffset={yOffset} />
-    </div>
+    <MobileMenuStyled style={{ transform: `translateY(${yOffset}px)` }}>
+      <Item
+        onClick={{ transform: `translateY(${yOffset}px)` }}
+        ref={ref}
+        yOffset={yOffset}
+        children={dzieci}
+      />
+    </MobileMenuStyled>
   );
 }
 
-const Item = React.forwardRef(function ({ data, yOffset }, ref) {
+const Item = React.forwardRef(function ({ children, data, yOffset }, ref) {
   const variants = {
     top: {
       y: -yOffset,
@@ -87,7 +97,7 @@ const Item = React.forwardRef(function ({ data, yOffset }, ref) {
   };
 
   return (
-    <motion.div
+    <MobileMenuContainer
       ref={ref}
       className="item"
       drag={yOffset ? "y" : false}
@@ -102,30 +112,10 @@ const Item = React.forwardRef(function ({ data, yOffset }, ref) {
         y: { type: "spring", stiffness: 500, damping: 50 },
       }}
     >
-      <div className="item-upper" onClick={handleOnClick}>
+      <MobileMenuTitleWrapper onClick={handleOnClick}>
         <span>Materials</span>
-      </div>
-      <div className="item-lower">
-        <MaterialItem name="RAL 9006" srcimage={RAL9006Image} />
-        <MaterialItem name="Name" srcimage={DarkOakImage} />
-        <MaterialItem name="Name" srcimage={BirchOakImage} />
-        <MaterialItem name="Name" srcimage={BlackFoilPatternImage} />
-
-        <MaterialItem name="Name" srcimage={SpruceOakImage} />
-        <MaterialItem name="Name" srcimage={OakImage} />
-        <MaterialItem name="Name" srcimage={AcaciaOakImage} />
-        <MaterialItem name="Name" srcimage={WhiteFoilPatternImage} />
-
-        <MaterialItem name="Name" srcimage={BlackSkinImage} />
-        <MaterialItem name="Name" srcimage={WhiteOakImage} />
-        <MaterialItem name="Name" srcimage={RedOakImage} />
-        <MaterialItem name="Name" srcimage={WhiteSkinImage} />
-
-        <MaterialItem name="Name" srcimage={LightOakImage} />
-        <MaterialItem name="Name" srcimage={SheetPatternImage} />
-        <MaterialItem name="Name" srcimage={CaroPatternImage} />
-        <MaterialItem name="Name" srcimage={RALFoilImage} />
-      </div>
-    </motion.div>
+      </MobileMenuTitleWrapper>
+      {children}
+    </MobileMenuContainer>
   );
 });

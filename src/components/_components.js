@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { WideContainerStyled } from "./_maincomponents";
 import { keyframes } from "@emotion/react";
+import { motion } from "framer-motion";
 
 const Test = keyframes`
 0%, 90% {
@@ -27,10 +28,6 @@ export const MaterialChangeStyled = styled(WideContainerStyled)`
   transition: 150ms ease-out;
   cursor: pointer;
 
-  & .Test {
-    border: 2px solid red;
-  }
-
   &:hover {
   }
 
@@ -38,6 +35,10 @@ export const MaterialChangeStyled = styled(WideContainerStyled)`
     display: block;
     margin-left: 6px;
     margin-top: 6px;
+  }
+
+  @media (max-width: 1024px) {
+    display: none;
   }
 `;
 
@@ -60,7 +61,6 @@ export const MaterialItemStyled = styled.div`
   span {
     font-size: 1.2em;
     z-index: 100;
-    position: absolute;
     top: -5px;
     color: #45587b;
   }
@@ -70,7 +70,6 @@ export const MaterialItemStyled = styled.div`
   }
 
   &:hover {
-    box-shadow: 0 0 15px -4px black;
     transform: scale(1.1);
   }
 
@@ -80,6 +79,29 @@ export const MaterialItemStyled = styled.div`
     top: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
+  }
+
+  @media (max-width: 1024px) {
+    text-align: center;
+    width: calc(20% - 0.6em);
+    box-sizing: border-box;
+
+    &:nth-of-type(1) {
+      margin-left: 0;
+    }
+
+    div {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @media (max-width: 600px) {
+    width: calc(25% - 0.6em);
+  }
+
+  @media (max-width: 420px) {
+    width: calc(33% - 0.6em);
   }
 `;
 
@@ -161,3 +183,42 @@ export const LoaderStyled = styled.div`
     }
   }
 `;
+
+/*MOBILE MATERIALS*/
+
+export const MobileMenuStyled = styled(motion.div)`
+  width: 100%;
+  z-index: 2;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  height: auto;
+  display: none;
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
+`;
+
+export const MobileMenuContainer = styled(motion.div)`
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+
+  & .item-lower {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0.5rem;
+  }
+`;
+
+export const MobileMenuTitleWrapper = styled(motion.div)`
+  text-align: center;
+  padding: 1em 0;
+  font-size: 14px;
+`;
+
+export const MobileMenuContentWrapper = styled(motion.div)``;

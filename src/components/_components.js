@@ -18,15 +18,20 @@ export const LiftsStyledWrapper = styled.div`
 `;
 
 export const MaterialChangeStyled = styled(WideContainerStyled)`
+  display: flex;
   position: absolute;
-  background-color: white;
-  box-shadow: 0 0 15px 0 black;
+  min-width: 1024px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.41);
   z-index: 1;
   left: 0;
   right: 0;
   bottom: 0;
   transition: 150ms ease-out;
+  max-width: 1200px;
   cursor: pointer;
+  border-radius: 10px 10px 0 0;
 
   &:hover {
   }
@@ -43,26 +48,32 @@ export const MaterialChangeStyled = styled(WideContainerStyled)`
 `;
 
 export const MaterialItemStyled = styled.div`
-  margin: 1em 6px 1em 0;
+  margin: 1em 6px 0 0;
   display: inline-block;
   transition: 150ms ease-out;
+  width: 100%;
+  text-align: center;
 
   div {
     position: relative;
     box-shadow: 0 0 10px -4px black;
     height: 36px;
+    margin-left: auto;
+    margin-right: auto;
     width: 36px;
     overflow: hidden;
     box-sizing: border-box;
     border: 1px solid white;
     border-radius: 32px;
+    font-size: 1.1em;
   }
 
   span {
-    font-size: 1.2em;
+    display: block;
+    margin-top: 0.5em;
+    min-height: 30px;
     z-index: 100;
-    top: -5px;
-    color: #45587b;
+    color: white;
   }
 
   &:nth-of-type(1) {
@@ -93,6 +104,11 @@ export const MaterialItemStyled = styled.div`
     div {
       margin-left: auto;
       margin-right: auto;
+    }
+
+    span {
+      color: black;
+      font-size: 1.3em;
     }
   }
 
@@ -219,6 +235,22 @@ export const MobileMenuTitleWrapper = styled(motion.div)`
   text-align: center;
   padding: 1em 0;
   font-size: 14px;
+
+  span {
+    position: relative;
+
+    &:after {
+      content: "";
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -6px;
+      border-radius: 1px;
+      width: 40px;
+      height: 2px;
+      background-color: #c3ccd7;
+      position: absolute;
+    }
+  }
 `;
 
 export const MobileMenuContentWrapper = styled(motion.div)``;

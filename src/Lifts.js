@@ -7,7 +7,7 @@ import MaterialChange from "./components/MaterialChange";
 /*HDRI Images Platforms*/
 import RAL9006Platform from "./assets/HDRI/HDRI-RAL9006.jpg";
 import DarkOakPlatform from "./assets/HDRI/HDRI-DarkOak.jpg";
-import BirchOakPlatform from "./assets/HDRI/Denoised beauty1.jpeg";
+import BirchOakPlatform from "./assets/HDRI/HDRI-BirchOak.jpg";
 import BlackFoilPatternPlatform from "./assets/HDRI/HDRI-BlackFoilPattern.jpg";
 
 import SpruceOakPlatform from "./assets/HDRI/HDRI-SpruceOak.jpg";
@@ -15,15 +15,15 @@ import OakPlatform from "./assets/HDRI/HDRI-Oak.jpg";
 import AcaciaOakPlatform from "./assets/HDRI/HDRI-AcaciaOak.jpg";
 import WhiteFoilPatternPlatform from "./assets/HDRI/HDRI-WhiteFoilPattern.jpg";
 
-import BlackSkinPlatform from "./assets/HDRI/Denoised beauty1.jpeg";
-import WhiteOakPlatform from "./assets/HDRI/Denoised beauty1.jpeg";
+import BlackSkinPlatform from "./assets/HDRI/HDRI-BlackSkin.jpg";
+import WhiteOakPlatform from "./assets/HDRI/HDRI-WhiteOak.jpg";
 import RedOakPlatform from "./assets/HDRI/HDRI-RedOak.jpg";
 import WhiteSkinPlatform from "./assets/HDRI/HDRI-WhiteSkin.jpg";
 
-import LightOakPlatform from "./assets/HDRI/Denoised beauty1.jpeg";
+import LightOakPlatform from "./assets/HDRI/HDRI-LightOak.jpg";
 import SheetPatternPlatform from "./assets/HDRI/HDRI-SheetPattern.jpg";
-import CaroPatternPlatform from "./assets/HDRI/Denoised beauty1.jpeg";
-import RALFoilPlatform from "./assets/HDRI/Denoised beauty1.jpeg";
+import CaroPatternPlatform from "./assets/HDRI/HDRI-CaroPattern.jpg";
+import RALFoilPlatform from "./assets/HDRI/HDRI-RAL7038.jpg";
 import { LiftsStyledWrapper } from "./components/_components";
 import { Carousel } from "./components/Test";
 import MaterialItem from "./components/MaterialItem";
@@ -43,6 +43,7 @@ import LightOakImage from "./assets/Materials/LightOakMaterial.png";
 import SheetPatternImage from "./assets/Materials/SheetPatternMaterial.png";
 import CaroPatternImage from "./assets/Materials/CaroPatternMaterial.png";
 import RALFoilImage from "./assets/Materials/RALFoilMaterial.png";
+import { names } from "./settings";
 
 const AutoDetectControllers = () => {
   return <a-entity auto-detect-controllers="false" />;
@@ -67,85 +68,85 @@ class WelcomeToVR extends React.Component {
             <div className="item-lower">
               <MaterialItem
                 click={this.changePos(" 0 0 0")}
-                name="RAL 9006"
+                name={names.dobel[1]}
                 srcimage={RAL9006Image}
               />
               <MaterialItem
                 click={this.changePos(" 0 0 -20")}
-                name="Name"
+                name={names.dobel[2]}
                 srcimage={DarkOakImage}
               />
               <MaterialItem
                 click={this.changePos(" 0 0 -40")}
-                name="Name"
+                name={names.dobel[3]}
                 srcimage={BirchOakImage}
               />
               <MaterialItem
                 click={this.changePos(" 0 0 -60")}
-                name="Name"
+                name={names.dobel[4]}
                 srcimage={BlackFoilPatternImage}
               />
 
               <MaterialItem
                 click={this.changePos(" 20 0 0 ")}
-                name="Name"
+                name={names.dobel[5]}
                 srcimage={SpruceOakImage}
               />
               <MaterialItem
                 click={this.changePos(" 20 0 -20")}
-                name="Name"
+                name={names.dobel[6]}
                 srcimage={OakImage}
               />
               <MaterialItem
                 click={this.changePos(" 20 0 -40")}
-                name="Name"
+                name={names.dobel[7]}
                 srcimage={AcaciaOakImage}
               />
               <MaterialItem
                 click={this.changePos(" 20 0 -60")}
-                name="Name"
+                name={names.dobel[8]}
                 srcimage={WhiteFoilPatternImage}
               />
 
               <MaterialItem
                 click={this.changePos(" 40 0 0")}
-                name="Name"
+                name={names.dobel[9]}
                 srcimage={BlackSkinImage}
               />
               <MaterialItem
                 click={this.changePos(" 40 0 -20")}
-                name="Name"
+                name={names.dobel[10]}
                 srcimage={WhiteOakImage}
               />
               <MaterialItem
                 click={this.changePos(" 40 0 -40")}
-                name="Name"
+                name={names.dobel[11]}
                 srcimage={RedOakImage}
               />
               <MaterialItem
                 click={this.changePos(" 40 0 -60")}
-                name="Name"
+                name={names.dobel[12]}
                 srcimage={WhiteSkinImage}
               />
 
               <MaterialItem
                 click={this.changePos("60 0 0")}
-                name="Name"
+                name={names.dobel[13]}
                 srcimage={LightOakImage}
               />
               <MaterialItem
                 click={this.changePos("60 0 -20")}
-                name="Name"
+                name={names.dobel[14]}
                 srcimage={SheetPatternImage}
               />
               <MaterialItem
                 click={this.changePos("60 0 -40")}
-                name="Name"
+                name={names.dobel[15]}
                 srcimage={CaroPatternImage}
               />
               <MaterialItem
                 click={this.changePos("60 0 -60")}
-                name="Name"
+                name={names.dobel[16]}
                 srcimage={RALFoilImage}
               />
             </div>
@@ -190,14 +191,14 @@ class WelcomeToVR extends React.Component {
               <img id="acaciaoak" src={AcaciaOakPlatform} alt="" />
               <img
                 id="whitefoilpattern"
-                src={WhiteFoilPatternPlatform}
+                src={WhiteSkinPlatform}
                 alt=""
               />
 
               <img id="blackskin" src={BlackSkinPlatform} alt="" />
               <img id="whiteoak" src={WhiteOakPlatform} alt="" />
               <img id="redoak" src={RedOakPlatform} alt="" />
-              <img id="whiteskin" src={WhiteSkinPlatform} alt="" />
+              <img id="materialwhiteskin" src={WhiteFoilPatternPlatform} alt="" />
 
               <img id="lightoak" src={LightOakPlatform} alt="" />
               <img id="sheetpattern" src={SheetPatternPlatform} alt="" />
@@ -217,7 +218,7 @@ class WelcomeToVR extends React.Component {
             <a-sky position="40 0 0" radius="10" src="#blackskin" />
             <a-sky position="40 0 -20" radius="10" src="#whiteoak" />
             <a-sky position="40 0 -40" radius="10" src="#redoak" />
-            <a-sky position="40 0 -60" radius="10" src="#whiteskin" />
+            <a-sky position="40 0 -60" radius="10" src="#materialwhiteskin" />
 
             <a-sky position="60 0 0" radius="10" src="#lightoak" />
             <a-sky position="60 0 -20" radius="10" src="#sheetpattern" />
@@ -226,7 +227,7 @@ class WelcomeToVR extends React.Component {
             <a-entity position={this.state.currentPos} rotation="0 90 0">
               <a-camera
                 fov="80"
-                wasd-controls-enabled="false"
+                wasd-controls-enabled="true"
                 reverse-mouse-drag="true"
               >
                 {/*<a-cursor />*/}

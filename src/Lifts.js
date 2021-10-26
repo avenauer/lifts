@@ -72,80 +72,80 @@ class WelcomeToVR extends React.Component {
                 srcimage={RAL9006Image}
               />
               <MaterialItem
-                click={this.changePos(" 0 0 -20")}
+                click={this.changePos(" 0 0 -200")}
                 name={names.dobel[2]}
                 srcimage={DarkOakImage}
               />
               <MaterialItem
-                click={this.changePos(" 0 0 -40")}
+                click={this.changePos(" 0 0 -400")}
                 name={names.dobel[3]}
                 srcimage={BirchOakImage}
               />
               <MaterialItem
-                click={this.changePos(" 0 0 -60")}
+                click={this.changePos(" 0 0 -600")}
                 name={names.dobel[4]}
                 srcimage={BlackFoilPatternImage}
               />
 
               <MaterialItem
-                click={this.changePos(" 20 0 0 ")}
+                click={this.changePos(" 200 0 0 ")}
                 name={names.dobel[5]}
                 srcimage={SpruceOakImage}
               />
               <MaterialItem
-                click={this.changePos(" 20 0 -20")}
+                click={this.changePos(" 200 0 -200")}
                 name={names.dobel[6]}
                 srcimage={OakImage}
               />
               <MaterialItem
-                click={this.changePos(" 20 0 -40")}
+                click={this.changePos(" 200 0 -400")}
                 name={names.dobel[7]}
                 srcimage={AcaciaOakImage}
               />
               <MaterialItem
-                click={this.changePos(" 20 0 -60")}
+                click={this.changePos(" 200 0 -600")}
                 name={names.dobel[8]}
                 srcimage={WhiteFoilPatternImage}
               />
 
               <MaterialItem
-                click={this.changePos(" 40 0 0")}
+                click={this.changePos(" 400 0 0")}
                 name={names.dobel[9]}
                 srcimage={BlackSkinImage}
               />
               <MaterialItem
-                click={this.changePos(" 40 0 -20")}
+                click={this.changePos(" 400 0 -200")}
                 name={names.dobel[10]}
                 srcimage={WhiteOakImage}
               />
               <MaterialItem
-                click={this.changePos(" 40 0 -40")}
+                click={this.changePos(" 400 0 -400")}
                 name={names.dobel[11]}
                 srcimage={RedOakImage}
               />
               <MaterialItem
-                click={this.changePos(" 40 0 -60")}
+                click={this.changePos(" 400 0 -600")}
                 name={names.dobel[12]}
                 srcimage={WhiteSkinImage}
               />
 
               <MaterialItem
-                click={this.changePos("60 0 0")}
+                click={this.changePos("600 0 0")}
                 name={names.dobel[13]}
                 srcimage={LightOakImage}
               />
               <MaterialItem
-                click={this.changePos("60 0 -20")}
+                click={this.changePos("600 0 -200")}
                 name={names.dobel[14]}
                 srcimage={SheetPatternImage}
               />
               <MaterialItem
-                click={this.changePos("60 0 -40")}
+                click={this.changePos("600 0 -400")}
                 name={names.dobel[15]}
                 srcimage={CaroPatternImage}
               />
               <MaterialItem
-                click={this.changePos("60 0 -60")}
+                click={this.changePos("600 0 -600")}
                 name={names.dobel[16]}
                 srcimage={RALFoilImage}
               />

@@ -1,23 +1,6 @@
 import React from "react";
-import { motion, useAnimation } from "framer-motion";
+import { useAnimation } from "framer-motion";
 import "../index.css";
-import MaterialItem from "./MaterialItem";
-import RAL9006Image from "../assets/Materials/RAL9006Material.png";
-import DarkOakImage from "../assets/Materials/DarkOakMaterial.png";
-import BirchOakImage from "../assets/Materials/BirchOakMaterial.png";
-import BlackFoilPatternImage from "../assets/Materials/BlackFoilPatternMaterial.png";
-import SpruceOakImage from "../assets/Materials/SpruceOakMaterial.png";
-import OakImage from "../assets/Materials/OakMaterial.png";
-import AcaciaOakImage from "../assets/Materials/AcaciaOakMaterial.png";
-import WhiteFoilPatternImage from "../assets/Materials/WhiteFoilPatternMaterial.png";
-import BlackSkinImage from "../assets/Materials/BlackSkinMaterial.png";
-import WhiteOakImage from "../assets/Materials/WhiteOakMaterial.png";
-import RedOakImage from "../assets/Materials/RedOakMaterial.png";
-import WhiteSkinImage from "../assets/Materials/WhiteSkinMaterial.png";
-import LightOakImage from "../assets/Materials/LightOakMaterial.png";
-import SheetPatternImage from "../assets/Materials/SheetPatternMaterial.png";
-import CaroPatternImage from "../assets/Materials/CaroPatternMaterial.png";
-import RALFoilImage from "../assets/Materials/RALFoilMaterial.png";
 import {
   MobileMenuContainer,
   MobileMenuStyled,

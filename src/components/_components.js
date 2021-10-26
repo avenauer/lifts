@@ -254,3 +254,13 @@ export const MobileMenuTitleWrapper = styled(motion.div)`
 `;
 
 export const MobileMenuContentWrapper = styled(motion.div)``;
+
+export const LogoWrapperStyled = styled.div`
+  z-index: 10;
+  width: 60px;
+  left: 50%;
+  top: 10px;
+  opacity: 0.3;
+  transform: translateX(-50%);
+  position: absolute;
+`;

@@ -189,16 +189,16 @@ class WelcomeToVR extends React.Component {
               <img id="spruceoak" src={SpruceOakPlatform} alt="" />
               <img id="oak" src={OakPlatform} alt="" />
               <img id="acaciaoak" src={AcaciaOakPlatform} alt="" />
-              <img
-                id="whitefoilpattern"
-                src={WhiteSkinPlatform}
-                alt=""
-              />
+              <img id="whitefoilpattern" src={WhiteSkinPlatform} alt="" />
 
               <img id="blackskin" src={BlackSkinPlatform} alt="" />
               <img id="whiteoak" src={WhiteOakPlatform} alt="" />
               <img id="redoak" src={RedOakPlatform} alt="" />
-              <img id="materialwhiteskin" src={WhiteFoilPatternPlatform} alt="" />
+              <img
+                id="materialwhiteskin"
+                src={WhiteFoilPatternPlatform}
+                alt=""
+              />
 
               <img id="lightoak" src={LightOakPlatform} alt="" />
               <img id="sheetpattern" src={SheetPatternPlatform} alt="" />
@@ -227,7 +227,7 @@ class WelcomeToVR extends React.Component {
             <a-entity position={this.state.currentPos} rotation="0 90 0">
               <a-camera
                 fov="80"
-                wasd-controls-enabled="true"
+                wasd-controls-enabled="false"
                 reverse-mouse-drag="true"
               >
                 {/*<a-cursor />*/}

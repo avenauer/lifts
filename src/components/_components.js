@@ -85,7 +85,7 @@ export const MaterialItemStyled = styled.div`
   }
 
   img {
-    width: 128px;
+    width: 100%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -94,30 +94,30 @@ export const MaterialItemStyled = styled.div`
 
   @media (max-width: 1024px) {
     text-align: center;
-    width: calc(20% - 0.6em);
+    min-width: 75.25px;
+    width: 25%;
     box-sizing: border-box;
-
+    margin: 0.5em 0 0;
     &:nth-of-type(1) {
       margin-left: 0;
     }
 
-    div {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
     span {
+      min-height: 20px;
       color: black;
       font-size: 1.3em;
     }
   }
-
   @media (max-width: 600px) {
-    width: calc(25% - 0.6em);
+  }
+
+  @media (max-width: 450px) {
+    span {
+      font-size: 1.1em;
+    }
   }
 
   @media (max-width: 420px) {
-    width: calc(33% - 0.6em);
   }
 `;
 
@@ -219,25 +219,46 @@ export const MobileMenuStyled = styled(motion.div)`
 
 export const MobileMenuContainer = styled(motion.div)`
   box-sizing: border-box;
-  background-color: white;
+  /*background-color: white;*/
+  position: relative;
   border-radius: 15px 15px 0 0;
   width: 100%;
+  min-height: 148px;
 
   & .item-lower {
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 1rem 0.5rem;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 500px;
+      left: 0;
+      bottom: -499px;
+      background-color: white;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    & .item-lower {
+      background-color: white;
+      padding: 0.75em 0.5em;
+      //overflow: scroll;
+    }
   }
 `;
 
 export const MobileMenuTitleWrapper = styled(motion.div)`
   text-align: center;
-  padding: 1em 0;
+  padding: 1.2em 0;
   font-size: 14px;
 
   span {
     position: relative;
+    color: white;
 
     &:after {
       content: "";
@@ -252,8 +273,6 @@ export const MobileMenuTitleWrapper = styled(motion.div)`
     }
   }
 `;
-
-export const MobileMenuContentWrapper = styled(motion.div)``;
 
 export const LogoWrapperStyled = styled.div`
   z-index: 10;

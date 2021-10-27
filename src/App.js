@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Logo />
-      {/*<Loader />*/}
+      <Loader />
       <Lifts />
     </>
   );

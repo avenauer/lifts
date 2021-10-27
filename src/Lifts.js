@@ -3,6 +3,7 @@ import "aframe";
 import { Scene } from "aframe-react";
 import "aframe-event-set-component";
 import MaterialChange from "./components/MaterialChange";
+import { motion } from "framer-motion";
 
 /*HDRI Images Platforms*/
 import RAL9006Platform from "./assets/HDRI/HDRI-RAL9006.jpg";
@@ -218,7 +219,11 @@ class WelcomeToVR extends React.Component {
             <a-sky position="400 0 0" radius="100" src="#blackskin" />
             <a-sky position="400 0 -200" radius="100" src="#whiteoak" />
             <a-sky position="400 0 -400" radius="100" src="#redoak" />
-            <a-sky position="400 0 -600" radius="100" src="#materialwhiteskin" />
+            <a-sky
+              position="400 0 -600"
+              radius="100"
+              src="#materialwhiteskin"
+            />
 
             <a-sky position="600 0 0" radius="100" src="#lightoak" />
             <a-sky position="600 0 -200" radius="100" src="#sheetpattern" />

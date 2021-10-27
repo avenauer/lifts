@@ -6,6 +6,7 @@ import {
   MobileMenuStyled,
   MobileMenuTitleWrapper,
 } from "./_components";
+import { motion } from "framer-motion";
 
 export function Carousel({ dzieci }) {
   const ref = React.useRef();
@@ -98,7 +99,7 @@ const Item = React.forwardRef(function ({ children, data, yOffset }, ref) {
       <MobileMenuTitleWrapper onClick={handleOnClick}>
         <span>Materials</span>
       </MobileMenuTitleWrapper>
-      {children}
+      <div onClick={handleOnClick}>{children}</div>
     </MobileMenuContainer>
   );
 });
